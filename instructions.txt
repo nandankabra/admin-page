@@ -1,0 +1,29 @@
+Admin Template
+1. Scratch (from Zero)
+2. Fork (Existing Template customization)
+
+Advantages
+1. Less Time you will finish
+the work
+
+Which Admin Template To Choose
+1. Royalty Fee / Open Source
+2. Customization is permiatable
+3. Licensing Free Open Source
+
+
+AdminLTE 3 Bootstrap 4
+AdminLTE 2 Boostrap 3
+
+
+RC = Release Candidate
+
+html comment
+alt + shift + a
+ctrl + k + c
+
+Search 
+
+Ctrl + F 
+
+
