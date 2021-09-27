@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -26,57 +28,81 @@
   <!-- summernote -->
   <link rel="stylesheet" href="js/summernote/summernote-bs4.min.css">
   <style>
-    .n_purple{
+   .s_purple{
       background-color: #442460 !important;
     } 
-    .n_purple_txt{
+    .s_purple_txt{
       color: #442460 !important;
     } 
-    .n_pinkcolor{
+    .s_pinkcolor{
       background-color: #F8EEFA;
     }
-    .n_pink{
+    .s_pink{
           
       height: 144px;
     }
-    .n_pinkbox{
-      background-image: url("img/bg.svg") !important;
+    .s_pinkbox{
+      background-image: url("img/rabbit.svg") !important;
       background-repeat: no-repeat;
       background-size: contain;
     }
-    .n_tbdr{
+    .s_main{
+           min-height: 900px;
+    }
+    .s_tbdr{
       border:1px dashed #000;
     }
-    ::placeholder {
+    .active{
+             background-color: #FFB900 !important;
+             color: black !important;
+    }
+      #circle{
+                height: 37px;
+                width: 37px;
+                border-radius: 37px;
+                background-color: #000 !important;
+                display: block;
+                position: absolute;
+                top: 0px;
+                bottom:0px;
+                left: 140px;
+            }
+            .s_username{
+                margin-right: 50px;
+            }
+            .s_header_nav{
+                    background: #F8EEFA !important;
+                }
+                ::placeholder {
       color: #000 !important;
     }
-    .n_border-bottom:focus ~ .n_xyz{
+    .s_border-bottom:focus ~ .s_xyz{
       top:-10px;
       font-size: 0.8em;
     }
-    .n_border-bottom{
+    .s_border-bottom{
       border-bottom: 2px solid #000 !important;
     }
-    .n_xyz{
+    .s_xyz{
       position: absolute;
       top:0px;
       transition: all 0.1s linear;
       font-size: 1em;
     }
     @media only screen and (max-width: 600px) {
-      .n_pink{  
+      .s_pink{  
         height: 80px;
       }
     }
     @media only screen and (min-width: 1390px) {
-      .n_pinkbox{  
+      .s_pinkbox{  
         background-size: cover;
       }
     }
   </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-  <!-- Modal -->
+   <!-- Modal -->
 <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg pt-5">
     <div class="modal-content mt-5">
@@ -92,37 +118,38 @@
           <div class="row">
             <div class="col-6">
               <div class="form-group" style="position: relative;">
-                <input placeholder="" type="email " class="form-control border-0 rounded-0 n_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
-                <span class="n_xyz">Enter project name</span>
+                <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span class="s_xyz">Enter project name</span>
               </div>
             </div>
             <div class="col-6">
-              <div class="form-group" style="position: relative;">
-                <input placeholder="" type="email " class="form-control border-0 rounded-0 n_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
-                <span class="n_xyz">Enter research market</span>
+              <div class="form-group style="position: relative;">
+                <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span class="s_xyz">Enter research market</span>
               </div>
             </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="form-group" style="position: relative;">
-                <input placeholder="" type="email " class="form-control border-0 rounded-0 n_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
-                <span class="n_xyz">survey type</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="form-group" style="position: relative;">
-                <input placeholder="" type="email " class="form-control border-0 rounded-0 n_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
-                <span class="n_xyz">survey type</span>
-              </div>
-            </div>
-            
           </div>
           
+
         </form>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group" style="position: relative;">
+              <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+              <span class="s_xyz">Enter sample size</span>
+          </div>
+            </div>
+            <div class="col-6">
+              <div class="form-group style="position: relative;">
+                <input placeholder="" type="email " class="form-control border-0 rounded-0 s_border-bottom " id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span class="s_xyz">survey type</span>
+              </div>
+            </div>
+        </div>
       </div>
       <div class="modal-footer border-top-0">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Reset</button>
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Reset screen</button>
+        <button type="submit" class="btn btn-primary">Create project</button>
       </div>
     </div>
   </div>
@@ -144,6 +171,7 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
+          <p>search or help</p>
         </a>
         <div class="navbar-search-block">
           <form class="form-inline">
@@ -261,8 +289,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+        <a class="nav-link s_username" href="#">Nidhi Bokadiya<i class="fas fa-chevron-down"></i><span id="circle"></span>
         </a>
       </li>
     </ul>
@@ -270,11 +297,11 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="n_purple main-sidebar sidebar-dark-primary elevation-4">
+  <aside class=" s_purple main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link bg-white">
-      <img src="img/logo.svg" alt="IDSTATS" class="brand-image" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <img src="img/logo2.png" alt="IDSTATS" class="brand-image" style="opacity: .8">
+      <span class="brand-text font-weight-light">NEURO LAB</span>
     </a>
 
     <!-- Sidebar -->
@@ -295,171 +322,44 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="#" class="nav-link active">
+                <i class="fas fa-chart-bar"></i>
               <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
+               Client Dashboard
+                <i class="right fas fa-angle-left m-2"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="pages/widgets.html" class="nav-link m-2">
+                <i class="far fa-envelope"></i>
               <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
+              Solution
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+                <i class="fas fa-file-invoice m-2"></i>
               <p>
-                Layout Options
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
+                Payment History
+                
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation + Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Sidebar <small>+ Custom Area</small></p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Navbar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Footer</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+                <i class="fas fa-dollar-sign m-2"></i>
               <p>
-                Charts
-                <i class="right fas fa-angle-left"></i>
+                Pricing
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Flot</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/uplot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>uPlot</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+                <i class="fas fa-user m-2"></i>
               <p>
-                Forms
-                <i class="fas fa-angle-left right"></i>
+               Help
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
-                </a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -473,9 +373,8 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid n_pink n_pinkcolor p-3">
-        <div class="n_pinkbox h-100"></div><!-- /.row -->
-        
+      <div class="container-fluid s_pink s_pinkcolor p-3">
+        <div class="s_pinkbox h-100"></div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -485,13 +384,20 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-6">
-            <h3 class="fw-bold n_purple_txt">User Experience Mapping</h3>
+            <h3 class="fw-bold s_purple_txt">User Experience Mapping</h3>
           </div>
           <div class="col-6 ">
-            <button class="btn float-right n_purple text-white"  data-toggle="modal" data-target="#exampleModal">Create new project</button>
+            <button class="btn float-right s_purple text-white"  data-toggle="modal" data-target="#exampleModal">Create new project</button>
           </div>
         </div>
         
+ 
+          
+   
+      
+            
+        
+
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
